@@ -160,7 +160,7 @@ module.exports = async (
   puppeteer.use(pluginStealth());
   const browser = await puppeteer.launch({
     headless: true,
-    args: [...puppeteerArgs],
+    args: [ '--no-sandbox','--disable-setuid-sandbox'],
   });
   const page = await browser.newPage();
   page.setUserAgent(puppeteerAgent);
