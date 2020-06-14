@@ -4,8 +4,7 @@
   "description": "Get preview data (a title, description, image, domain name) from a url. Library uses puppeteer headless browser to scrape the web site.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=8.16.0"
