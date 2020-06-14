@@ -178,7 +178,7 @@ module.exports = async (
   await browser.close();
   return obj;
 };
-const linkPreview = require("link-preview");
 
-const previewData = await linkPreview(uri);
-console.log(previewData);
+
+
+
