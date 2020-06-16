@@ -1,9 +1,9 @@
 const express = require('express');
 const linkPreview = require("../link-preview");
 const app = express();
-const port = process.env.PORT || 8080;
+const port = 80;
 
-app.get('/link', function (req, res) {
+app.get('/', function (req, res) {
    (async function() {
    const response = await linkPreview(req.query.url);
 	res.send(response);
