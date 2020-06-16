@@ -1,12 +1,20 @@
 const express = require('express');
-//const linkPreview = require("link-preview");
-const apl = express();
+const linkPreview = require("../link-preview");
+const app = express();
 const port = process.env.PORT || 8080;
-apl.get('/', function (req, res) {
-  //const result = await linkPreview(req.query.url);
-  res.send("Hello World");
+
+app.get('/link', function (req, res) {
+   (async function() {
+   //const response = await linkPreview("https://www.digitalocean.com/community/tutorials/nodejs-req-object-in-expressjs");
+   const response = await linkPreview(req.query.url);
+	res.send(response);
+  	})(req,res);
 });
-apl.listen(port, function () {
+//const start = async function() {
+  // const result = await linkPreview("https://www.digitalocean.com/community/tutorials/nodejs-req-object-in-expressjs");
+  //  console.log(result);
+//}
+app.listen(port, function () {
   console.log('Example app listening on port ' + port);
-});
+  });
 
