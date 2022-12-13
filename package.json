@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/Nick-007/link-preview#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "get-urls": "^9.2.0",
     "puppeteer": "^2.1.1",
     "puppeteer-extra": "^2.1.3",
